@@ -4,6 +4,6 @@ exports.seed = function (knex) {
     .del()
     .then(function () {
       // Inserts seed entries
-      return knex("exercises").insert([{ exercise: "squats", reps: 150 }]);
+      return knex("exercises").insert([{ exercise: "squats", reps: 120 }]);
     });
 };
