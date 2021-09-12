@@ -9,7 +9,7 @@ exports.up = function (knex) {
     table.timestamp("updated_at").defaultTo(knex.fn.now());
   })
     .createTable("exercises", function(table) {
-      table.increments("id");
+      table.increments("id").primary();
       table.string("exercise").notNullable();
       table.integer("reps").notNullable();
       table.timestamp("created_at").defaultTo(knex.fn.now());
